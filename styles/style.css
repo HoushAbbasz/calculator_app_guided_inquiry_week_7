@@ -77,6 +77,9 @@ body.dark .menu a {
 body.dark .menu li:hover {
   background-color: rgb(93, 93, 93);
 }
+body.dark #history .history-item:hover {
+  background-color: #111;
+}
 
 header {
   padding: 0;
@@ -267,6 +270,7 @@ button:active {
 #history .history-item {
   padding: 5px;
   cursor: pointer;
+  border-radius: 25px;
 }
 #history .history-item:hover {
   background-color: #ddd;

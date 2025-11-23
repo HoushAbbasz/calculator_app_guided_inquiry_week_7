@@ -112,7 +112,9 @@ body {
       }
     }
   }
-
+    #history .history-item:hover {
+  background-color: $secondary-bg;
+}
   }
 }
 
@@ -317,6 +319,7 @@ button {
   .history-item {
     padding: 5px;
     cursor: pointer;
+    border-radius: 25px;
 
     &:hover {
       background-color: $history-item-hover-bg;
