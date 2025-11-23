@@ -355,6 +355,9 @@ footer {
   table {
     border-spacing: 8px;
   }
+  footer {
+    height: 3.5vh;
+  }
 }
 @media (max-width: 600px) {
   img {
