@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Housh's Calculator App</title>
+
+        <link rel="stylesheet" href="../styles/style.css">
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Four Function Calculator</h1>
+            <nav>
+                  <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="menu">
+                        <li><a href="index.html">Home/About</a></li>
+                        <li><a href="derivative.html">Derivative Calculator</a></li>
+                    </ul>
+            </nav>
+        </header>
+
+
+        <div class="calculator">
+            <input type="text" id="display" disabled />
+            <div id="history">
+                <div id="history-log"></div>
+            </div>
+
+            <table>
+                <tr>
+                    <td><button>M+</button></td>
+                    <td><button>M-</button></td>
+                    <td><button>MR</button></td>
+                    <td><button>MC</button></td>
+                </tr>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>÷</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>x</button></td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>0</button></td>
+                    <td><button>.</button></td>
+                    <td><button class="submission">=</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button>C</button></td>
+                    <td>
+                        <button class="history-toggle">Check History</button>
+                    </td>
+                    <td>
+                        <button class="history-clear">Clear History</button>
+                    </td>
+                    <td>
+                        <button class="dark-toggle">Dark Mode</button>
+                    </td>
+                </tr>
+        </div>
+        
+        <footer>
+            <p>Created by Housh Abbaszadeh • November 2025</p>
+        </footer>
+    <script src="../scripts/four_functions.js"></script>
+    </body>
+
+</html>

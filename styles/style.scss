@@ -1,0 +1,474 @@
+$primary-bg: #f4f4f4;
+$primary-color: #e3e3e3;
+$primary-border: #ccc;
+$secondary-bg: #111;
+$secondary-color: white;
+$button-bg: #e3e3e3;
+$button-hover-bg: #d4d4d4;
+$button-active-bg: rgb(201.5, 201.5, 201.5);
+$history-bg: rgb(249.8285714286, 251.8285714286, 254.1714285714);
+$history-border: #444;
+$history-item-hover-bg: #ddd;
+$dark-toggle-bg: rgb(93, 93, 93);
+$dark-toggle-hover-bg: black;
+$submission-bg: #3EC73E;
+$submission-hover-bg: #00ff00;
+$variable-bg: #357ABD;
+$variable-hover-bg: #0080ff;
+$menu-bg: rgba(93, 93, 93, 0.25);
+$hamburger-bg: rgb(93, 93, 93);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: $primary-bg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &.dark {
+    background: $secondary-bg;
+    color: $secondary-color;
+
+    #display {
+      background: #222;
+      color: $secondary-color;
+      border-color: $history-border;
+    }
+
+    button {
+      background: #333;
+      color: $secondary-color;
+
+      &:hover {
+        background: #444;
+      }
+    }
+
+    #history {
+      background: #222;
+      color: #ccc;
+      border: 1px solid $history-border;
+    }
+
+    .history-toggle {
+      background-color: #357ABD;
+      &:hover {
+        background-color: #0077ff;
+      }
+    }
+
+    .history-clear {
+      background-color: #C73E3E;
+      &:hover {
+        background-color: #f70000;
+      }
+    }
+
+    .dark-toggle {
+      background-color: lightgrey;
+      color: black;
+      &:hover {
+        background-color: white;
+      }
+    }
+
+    .submission {
+      background-color: $submission-bg;
+      &:hover {
+        background-color: $submission-hover-bg;
+      }
+    }
+
+    .variable {
+      background-color: $variable-bg;
+      &:hover {
+        background-color: $variable-hover-bg;
+      }
+    }
+
+    .history-item:hover {
+      background-color: #444;
+    }
+
+    footer{
+      background-color: #333;
+    }
+
+    header{
+      background-color: #333;
+    }
+
+    .menu{
+      background-color: #333;
+    a{
+      color: $secondary-color
+
+    }
+    li{
+    &:hover {
+        background-color: rgb(93, 93, 93);
+      }
+    }
+  }
+
+  }
+}
+
+header {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  width: 100vw;
+  background-color: $primary-color;
+  border-radius: 25px;
+}
+
+nav {
+  padding: 0;
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
+  height: 6vh;
+  width: 6vw;
+  background-color: transparent;
+  border-radius: 10px;
+  border: solid rgb(93, 93, 93) 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.active .menu {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hamburger {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 999;
+
+    span {
+      display: block;
+      height: 8px;
+      background: $hamburger-bg;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    padding: 10px 0;
+    background: white;
+    border-radius: 10px;
+    border: rgb(93, 93, 93) solid 1px;
+    list-style: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.3s;
+    z-index: 999;
+
+    li {
+      padding: 10px 20px;
+      border-radius: 20px;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+      }
+
+      &:hover {
+        background-color: $menu-bg;
+      }
+    }
+  }
+}
+
+img {
+  position: fixed;
+  top: 12vh;
+  height: 30vh;
+  width: 70vw;
+  min-width: 650px;
+  border-radius: 25px;
+  z-index: -1;
+}
+
+.homepage-content {
+  position: relative;
+  margin: 0 auto;
+  top: 45vh;
+  width: 80vw;
+  height: auto;
+  min-height: 300px;
+  padding: 20px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  z-index: -2;
+
+  > div {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 15px;
+    border: 1px solid $primary-border;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  background-color: $primary-bg;
+}
+
+.homepage-title {
+  font-size: 1.75rem;
+}
+
+.calculator {
+  max-width: 600px;
+  margin: 15vh auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 10px;
+  margin: auto;
+
+  td {
+    height: auto;
+    width: auto;
+  }
+}
+
+button {
+  width: 80px;
+  height: 60px;
+  padding: 0;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: $button-bg;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $button-hover-bg;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $button-active-bg;
+    transform: scale(0.95);
+  }
+}
+
+#display {
+  width: 100%;
+  margin: 0 auto 15px auto;
+  padding: 15px;
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 2px solid $primary-border;
+  box-sizing: border-box;
+}
+
+#history {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: $history-bg;
+  box-sizing: border-box;
+  display: none;
+
+  #history-log {
+    font-family: monospace;
+    font-size: 1rem;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+
+  .history-item {
+    padding: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $history-item-hover-bg;
+    }
+  }
+}
+
+.history-toggle {
+  background-color: #357ABD;
+
+  &:hover {
+    background-color: #0077ff;
+  }
+}
+
+.history-clear {
+  background-color: #C73E3E;
+
+  &:hover {
+    background-color: #f70000;
+  }
+}
+
+.dark-toggle {
+  background-color: $dark-toggle-bg;
+  color: white;
+
+  &:hover {
+    background-color: $dark-toggle-hover-bg;
+  }
+}
+
+.submission {
+  background-color: $submission-bg;
+
+  &:hover {
+    background-color: $submission-hover-bg;
+  }
+}
+
+.variable {
+  background-color: $variable-bg;
+
+  &:hover {
+    background-color: $variable-hover-bg;
+  }
+}
+
+footer {
+  margin-top: 5vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 4vh;
+  width: 100vw;
+  background-color: $primary-color;
+}
+
+@media (max-width: 768px) {
+  .homepage-content {
+    margin: 0 auto;
+    width: 80vw;
+    gap: 10px;
+    height: 110vh;
+  }
+
+  .homepage-content > div {
+    flex: 1 1 100%;
+  }
+
+  .homepage-title {
+    font-size: 1.25rem;
+  }
+
+  nav {
+    width: 8vw;
+  }
+
+  .calculator {
+    margin-top: 12vh;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  #display {
+    font-size: 1.85rem;
+  }
+
+  button {
+    font-size: 1rem;
+    width: 60px;
+    height: 60px;
+  }
+
+  table {
+    border-spacing: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    min-width: 400px;
+  }
+
+  .homepage-content {
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .homepage-content > div {
+    flex: 1 1 100%;
+  }
+
+  .homepage-title {
+    font-size: 1rem;
+  }
+
+  nav {
+    width: 10vw;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  footer p {
+    font-size: 0.85rem;
+  }
+
+  #display {
+    font-size: 1.5rem;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+
+  table {
+    border-spacing: 6px;
+  }
+}
+
+@media (max-width: 500px) {
+  .homepage-title {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Housh's Calculator App</title>
+
+        <link rel="stylesheet" href="../styles/style.css">
+    </head>
+
+    <body>
+
+        <header>
+            <nav>
+                <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="menu">
+                        <li><a href="index.html">Home/About</a></li>
+                        <li><a href="calculator.html"> Four Function Calculator</a></li>
+                    </ul>
+                
+            </nav>
+            <h1> Derivative Calculator</h1>
+        </header>
+
+
+        <div class="calculator">
+            <input type="text" id="display" disabled />
+
+            <table>
+                <tr>
+                    <td><button>(</button></td>
+                    <td><button>)</button></td>
+                    <td><button>sin</button></td>
+                    <td><button>cos</button></td>
+                </tr>
+                <tr>
+                    <td><button>7</button></td>
+                    <td><button>8</button></td>
+                    <td><button>9</button></td>
+                    <td><button>÷</button></td>
+                </tr>
+                <tr>
+                    <td><button>4</button></td>
+                    <td><button>5</button></td>
+                    <td><button>6</button></td>
+                    <td><button>x</button></td>
+                </tr>
+                <tr>
+                    <td><button>1</button></td>
+                    <td><button>2</button></td>
+                    <td><button>3</button></td>
+                    <td><button>-</button></td>
+                </tr>
+                <tr>
+                    <td><button>0</button></td>
+                    <td><button>.</button></td>
+                    <td><button>exp (^)</button></td>
+                    <td><button>+</button></td>
+                </tr>
+                <tr>
+                    <td><button>C</button></td>
+                    <td><button class="submission">d/dn</button></td>
+                    <td><button class="variable" title="Variable n">n</button></td>
+                    <td>
+                        <button class="dark-toggle">Dark Mode</button>
+                    </td>
+            
+                </tr>
+        </div>
+        
+        <footer>
+            <p>Created by Housh Abbaszadeh • November 2025</p>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+        <script src="../scripts/derivative.js"></script>
+    </body>
+
+</html>
